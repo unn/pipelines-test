@@ -7,7 +7,7 @@ events:
           type: script
           script:
             - set -ex
-            - echo "Hello there Acquia!"
+            - echo "Hello there!"
             - env
             - echo "Testing env vars"
             - 'echo "CI=" : ${CI?"Need to set CI"}'
