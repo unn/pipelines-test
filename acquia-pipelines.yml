@@ -23,6 +23,8 @@ events:
       # YAML.
       - deploy:
           script:
+            - export PIPELINES_EVENT='build'
+            - export ENVIRONMENTS_DEBUG='true'
             - cd environments
             - composer install
             - php cloud-ode.php
