@@ -1,3 +1,3 @@
 <?php
 
-print('Hey');
+print('An example!');
