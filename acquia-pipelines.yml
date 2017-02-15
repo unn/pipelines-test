@@ -3,6 +3,7 @@ version: 1.0.0
 variables:
   global:
     ENVIRONMENTS_DEBUG: true
+    PIPELINES_EVENT: 'build'
     N3_KEY: 'e31cbe8b-5bc0-4073-834a-06c5b6d712da'
     N3_SECRET:
       secure: 2acqFw7OeLUtqByJyI3iJKlj26mll06GeE895aJommkIyjBfrrn9vwrlWjgrv0PoKS6QsJPHrr4HdU6zRYeQKJGISchZN91dGlQIhkLRQOmC1Nehl2lJuqj4SgXJgUSV0/2nYtbzLDaOWpFf/8LOHEhFKWrMM+nzyAQnmAMfyL5qef2/UnHrQcXOMlVY0/sTJjqq05Zpz+aR6tUJNRgVNWj6wT/Ej7xPSHB10msXWGBtJrkvjJQ6BTYgvMKFGHNYwv+9BlOh5OuCTAvkNJn6PeIxU4kE2JU+ZrhnRZsdVyY0P8mFm34ES6i9ZCokeZpjHATdA19t+bC7X1y5JjJPvA/qRtI/IKZkfxjBz6Hc91eGU1ADqN9WBs5OobbbA/chGuRW/rPGea0hAPpWDIy4UaVbRHlFI3nucflCj9wVBeq4jjkh+KsXuW70+LW5cN82U+8w/y8izN+OopN1qvwXSOEuw1ZaWgkL/uKtsebz/MDDK1MO3y6dNNFJ8k8tDJ+lVVm6/y1WnOca6nV3x2uGjzmSUFraKpeKTdhgM4mO4CfGt6bKYsrMkd0UpQBrj0qjPRWSWHUn1Z9IGzZHdkgxMyOI1aXJ8hd145z8sRlaTdZUft3i3/MsyA9UAaKBaIEWzntSqgNaKOtdFj8fnsFFX7ML/Up82GNCh6owbECUpz1V0E=T9draDoNeAnqnpcUYhYo8xzDzMW0i21XjWAlMVNM+JhTxvFtoLMnY2XDawz0z/NHrF1lS7wYr8cun1AmIdyPEesk+Zwj1JvrB1ZpLt3pGM7bJl2j4fdbnK8iMH/mBFWbN5x9DCg3wk6W62n50cArzMboXRCSZTuYHGUt2Jnjnb8=
@@ -23,8 +24,6 @@ events:
       # YAML.
       - deploy:
           script:
-            - export PIPELINES_EVENT='build'
-            - export ENVIRONMENTS_DEBUG='true'
             - cd environments
             - composer install
             - php cloud-ode.php
