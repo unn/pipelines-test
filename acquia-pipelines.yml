@@ -2,7 +2,6 @@ version: 1.0.0
 
 variables:
   global:
-    ENVIRONMENTS_DEBUG: true
     PIPELINES_EVENT: 'build'
     N3_KEY: 'e31cbe8b-5bc0-4073-834a-06c5b6d712da'
     N3_SECRET:
